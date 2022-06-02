@@ -1,0 +1,26 @@
+CREATE TABLE users
+(id int(10) PRIMARY KEY AUTO_INCREMENT, 
+name VARCHAR(100),
+surname VARCHAR(100),
+patronymic VARCHAR(100),
+birth_day DATE);
+
+CREATE TABLE categories 
+(id INT(10) PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100),
+parent INT(10));
+
+CREATE TABLE tags 
+(id INT(10) PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100),
+color VARCHAR(100));
+
+CREATE TABLE projects 
+(id INT(10) PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100));
+
+CREATE TABLE tasks
+(id int(10) PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100),
+date_start DATE,
+date_end DATE);

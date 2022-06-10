@@ -1,7 +1,6 @@
 SELECT employees.first_name, employees.last_name, employees.emp_no, departments.dept_name, MAX(salaries.salary), employees.hire_date 
 FROM employees, departments, dept_emp, salaries 
-WHERE (employees.emp_no = salaries.emp_no) 
-AND (employees.emp_no=dept_emp.emp_no) 
-AND (dept_emp.dept_no = departments.dept_no) 
+WHERE (employees.emp_no = salaries.emp_no) AND (salaries.salary > 60000) 
+AND (employees.emp_no=dept_emp.emp_no) AND (dept_emp.dept_no = departments.dept_no) 
 AND (employees.hire_date BETWEEN '1987-01-01' AND '1992-01-01') 
-GROUP BY employees.emp_no LIMIT 50;
+GROUP BY employees.emp_no;
